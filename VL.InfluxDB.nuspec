@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>VL.InfluxDB</id>
+    <version>1.0.0</version>
+    <title>VL.InfluxDB</title>
+    <authors>kichristensen, sebescudie</authors>
+    <owners>sebescudie</owners>
+    <projectUrl>https://github.com/superbien/VL.InfluxDB</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>A VL plugin that writes stuff in InfluxDB databases</summary>
+    <description>A VL plugin that writes stuff in InfluxDB databases</description>
+    <tags>database influxdb measure vl</tags>
+  </metadata> 
+  <files>
+    <file src="VL.InfluxDB.vl" target="" exclude="" />
+    <file src="help\**\*.vl" target="..\help" exclude="" />
+    <file src="lib\netstandard2.0\InfluxDB.WriteOnly.dll" target ="\lib" exclude="">
+  </files>
+</package>
