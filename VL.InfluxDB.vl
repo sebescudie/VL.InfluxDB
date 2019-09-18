@@ -394,6 +394,6 @@
     </Node>
   </Patch>
   <NugetDependency Id="HCGACeycTpRQKbJXBoovmF" Location="VL.Skia" Version="2019.1.0-0667-gac4859edde" />
-  <PlatformDependency Id="DIczK4E3a7ML7T865gNCTU" Location="./lib/InfluxDB.WriteOnly.dll" />
   <PlatformDependency Id="H3TaFLpvC2yPoukMnVCFxg" Location="netstandard" />
+  <PlatformDependency Id="TJD3odf3YDPOlRNoA9VBrM" Location="./lib/netstandard2.0/InfluxDB.WriteOnly.dll" />
 </Document>
