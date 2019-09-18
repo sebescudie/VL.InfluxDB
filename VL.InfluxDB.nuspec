@@ -15,6 +15,6 @@
   <files>
     <file src="VL.InfluxDB.vl" target="" exclude="" />
     <file src="help\**\*.vl" target="..\help" exclude="" />
-    <file src="lib\netstandard2.0\InfluxDB.WriteOnly.dll" target ="\lib" exclude="">
+    <file src="lib\netstandard2.0\InfluxDB.WriteOnly.dll" target ="\lib" exclude="" />
   </files>
 </package>
