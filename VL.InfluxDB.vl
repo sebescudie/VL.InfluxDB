@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="GMtCcB6B2tUOCHQj9hR5GR" LanguageVersion="2019.1.0-0703-g2ca4a704b6" Version="0.128">
+  <NugetDependency Id="Pdpj5PXZlRKP0WeSLtZ0k7" Location="VL.CoreLib" Version="2019.1.0-667" />
+  <Patch Id="HOTcwQFCgW4OVetUwRU6Zz">
+    <Canvas Id="Aa1UIr5Y7UXLx484gNXkmK" DefaultCategory="Network.Database.InfluxDB" CanvasType="FullCategory">
+      <!--
+
+    ************************ Client ************************
+
+-->
+      <Node Name="Client" Bounds="338,349" Id="SCEROklFzw4QF2ZiLPzwbK" Summary="Connects to an InfluxDB database">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="SJ5Bbf591WeL5ZxpBIOE9i">
+          <Canvas Id="Owt9mJgiTuJP4HY80rkyyr" CanvasType="Group">
+            <ControlPoint Id="MDwOxzrSb9ZQZUuhBEUDYZ" Bounds="401,339" />
+            <ControlPoint Id="B1MaGzbuaGNMbuWwv0dJaB" Bounds="567,339" />
+            <ControlPoint Id="NbZxjCVOYY3PXOkYEjhGZk" Bounds="640,339" />
+            <Node Bounds="387,389,268,180" Id="AiWAYacTnXrNYUvJTGZEfU">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="Aw3whMhhLJrPJ37r4MUpZQ" Name="Force" Kind="InputPin" />
+              <Pin Id="Pz9E0QwUzEmNoRl0T8orjX" Name="Dispose Cached Outputs" Kind="InputPin" />
+              <Pin Id="B0x25qDPeMsLUcFINCOUeD" Name="Has Changed" Kind="OutputPin" />
+              <Patch Id="DHrr4k1yUA3LsMMHY7csTS" ManuallySortedPins="true">
+                <Patch Id="QY0WWJPUxT9OxD9e0Zdvu2" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="IzPFyq5Gbf7OItFDdOZexF" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="399,523,68,26" Id="IEuQ7dNRky3QdkftMW7WM0">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.InfluxDbClient" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfluxDB" />
+                    <CategoryReference Kind="AssemblyCategory" Name="WriteOnly" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfluxDbClient" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="SmcSfj41MowLLfGFfLedCE" Name="Endpoint" Kind="InputPin" />
+                  <Pin Id="EW68w65dNK8PbbQzURvHOr" Name="Options" Kind="InputPin" />
+                  <Pin Id="JkEtHddy5SuMqf0sCkXd1s" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="399,412,46,26" Id="CtCGIzEh6zyOgm4uG9TXGp">
+                  <p:NodeReference LastCategoryFullName="System.Uri" LastSymbolSource="netstandard.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Uri" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <PinReference Kind="InputPin" Name="Uri String" />
+                  </p:NodeReference>
+                  <Pin Id="QpeT9sJbDqeN793ELmhVOI" Name="Uri String" Kind="InputPin" />
+                  <Pin Id="KQhajw0tulFK9hYW80kirf" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="565,412,78,26" Id="Hja7nYAhi78L1wfRYtMaBf">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.LoginInformation" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="LoginInformation" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="G6wPmTQPQcbMwXLToBlPYr" Name="Username" Kind="InputPin" />
+                  <Pin Id="RNZuFOiKajQLxziD7NSRBv" Name="Password" Kind="InputPin" />
+                  <Pin Id="FnbVBhM3utJNdWzaLf1V67" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="462,468,96,26" Id="VZyE4aJiDcyNbv6W8cdFxF">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.InfluxDbClientOptions" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfluxDbClientOptions" />
+                    <Choice Kind="OperationCallFlag" Name="SetLogin" />
+                  </p:NodeReference>
+                  <Pin Id="GIkRRDCgG4kN9f62H9qpD2" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="PqEcicHszm4QKyAXaq3gMG" Name="Value" Kind="InputPin" />
+                  <Pin Id="SJdXIwXABqiM3yUtqhEr6R" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="462,412,96,26" Id="VJvilHJh4OjQLx1IScPwov">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.InfluxDbClientOptions" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfluxDbClientOptions" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="BYLPQHlFi1nLNKncqgUDAT" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="MIENueGrkSZOT1dI6ztY9f" Bounds="401,397" Alignment="Top" />
+              <ControlPoint Id="SGFG1kKTq5DNfDUWkaHeQk" Bounds="567,397" Alignment="Top" />
+              <ControlPoint Id="GQ1DH0w3nnsLY011gauN01" Bounds="640,397" Alignment="Top" />
+              <ControlPoint Id="GAmxlUDYGGQQNFJ0G3vc8x" Bounds="401,564" Alignment="Bottom" />
+            </Node>
+            <ControlPoint Id="OlVFeSz8sKgPWMvrnt5gZO" Bounds="400,614" />
+          </Canvas>
+          <Patch Id="MSh0RWqCP9yOcAoZVt88lL" Name="Create" />
+          <Patch Id="UsKkJd95XVwQI28o2D0rcT" Summary="Creates a new connection to an InfluxDB database" Remarks="Cached" Name="Update">
+            <Pin Id="A59X0svYFAFPXfPCQOl5ze" Name="Uri String" Kind="InputPin" Bounds="442,354" Summary="The Uri to the database. Must be avalid Uri scheme, like http://192.168.1.230:8086" />
+            <Pin Id="ORyvQ6n728QLxOgxNCe04v" Name="Username" Kind="InputPin" Bounds="616,329" />
+            <Pin Id="RtGUld7Tps8OQFPSMayutI" Name="Password" Kind="InputPin" Bounds="706,337" />
+            <Pin Id="L3B6UqnaOC0M0JXG9fdFAY" Name="Output" Kind="OutputPin" Bounds="404,610" />
+          </Patch>
+          <ProcessDefinition Id="IbpevLtNqPwLMyg879ZXS0">
+            <Fragment Id="C9iQwfr69qhPn1iFqY4tYP" Patch="MSh0RWqCP9yOcAoZVt88lL" Enabled="true" />
+            <Fragment Id="JmeUUK90SIZOR2SyiuUovm" Patch="UsKkJd95XVwQI28o2D0rcT" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="R78rA0e1iGaLwwCzc9KfuB" Ids="A59X0svYFAFPXfPCQOl5ze,MDwOxzrSb9ZQZUuhBEUDYZ" IsHidden="true" />
+          <Link Id="CnzdM2B4A6uMZPAgPMMNmu" Ids="ORyvQ6n728QLxOgxNCe04v,B1MaGzbuaGNMbuWwv0dJaB" IsHidden="true" />
+          <Link Id="M8VUTh5BiS0NnMAGECR5bl" Ids="RtGUld7Tps8OQFPSMayutI,NbZxjCVOYY3PXOkYEjhGZk" IsHidden="true" />
+          <Link Id="S1qlHrZPi9BNnANroLGMOd" Ids="KQhajw0tulFK9hYW80kirf,SmcSfj41MowLLfGFfLedCE" />
+          <Link Id="Ncy2MhrjoNOOv5odbWqThZ" Ids="FnbVBhM3utJNdWzaLf1V67,PqEcicHszm4QKyAXaq3gMG" />
+          <Link Id="BaDU320uhxcLo9EeiF8Qws" Ids="BYLPQHlFi1nLNKncqgUDAT,GIkRRDCgG4kN9f62H9qpD2" />
+          <Link Id="AARRfnPrlwULorJnw75POL" Ids="SJdXIwXABqiM3yUtqhEr6R,EW68w65dNK8PbbQzURvHOr" />
+          <Link Id="SAo9pwVi0nJO2oR7GTsVG3" Ids="MDwOxzrSb9ZQZUuhBEUDYZ,MIENueGrkSZOT1dI6ztY9f" />
+          <Link Id="L4W1tRfLCQhP3VKgNJbi2A" Ids="MIENueGrkSZOT1dI6ztY9f,QpeT9sJbDqeN793ELmhVOI" />
+          <Link Id="BIzkWvV8d0nPuEYg4bUOO5" Ids="B1MaGzbuaGNMbuWwv0dJaB,SGFG1kKTq5DNfDUWkaHeQk" />
+          <Link Id="Q4WVvoFmNTTOHx1bCH3el8" Ids="SGFG1kKTq5DNfDUWkaHeQk,G6wPmTQPQcbMwXLToBlPYr" />
+          <Link Id="D5aYKgRC39rLowuevfMkhN" Ids="NbZxjCVOYY3PXOkYEjhGZk,GQ1DH0w3nnsLY011gauN01" />
+          <Link Id="M5wiiWk3oJyObmCQ9F7xwq" Ids="GQ1DH0w3nnsLY011gauN01,RNZuFOiKajQLxziD7NSRBv" />
+          <Link Id="Rd2JaXBBzaLPRv9ZaDipVn" Ids="JkEtHddy5SuMqf0sCkXd1s,GAmxlUDYGGQQNFJ0G3vc8x" />
+          <Link Id="VM0zvehCXafM7kRpqafssn" Ids="GAmxlUDYGGQQNFJ0G3vc8x,OlVFeSz8sKgPWMvrnt5gZO" />
+          <Link Id="BaqP41aVG7QMpQ0zVqqpec" Ids="OlVFeSz8sKgPWMvrnt5gZO,L3B6UqnaOC0M0JXG9fdFAY" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Point ************************
+
+-->
+      <Node Name="Point" Bounds="338,409" Id="NwC6VnIB9GONrpOIHGyj6T" Summary="Creates a point to insert in the database" Remarks="In InfluxDB, a point represents a single data record, similar to a row in a SQL database table. Each point: Has four components: a measurement, a tag set, a field set, and a timestamp.">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="LhVb0Pas2rfPsGlZqIZxnl">
+          <Canvas Id="PXYfS1h7iuGPkFhgyv976H" CanvasType="Group">
+            <ControlPoint Id="C2Y1dg7nJtCNPRIWWohh8C" Bounds="506,494" />
+            <ControlPoint Id="QC3er0kGlaWMSnKxnbnItQ" Bounds="541,512" />
+            <ControlPoint Id="FqcOjW7YT18McfDaHnKwDn" Bounds="567,532" />
+            <Node Bounds="441,556,146,322" Id="Ge0hGLTpMKkLu4KJNxBaJ8">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="Ol4z95agmrMPQQiabPedz8" Name="Force" Kind="InputPin" />
+              <Pin Id="Mb7enNxKmHaPWtA0oU2fuX" Name="Dispose Cached Outputs" Kind="InputPin" />
+              <Pin Id="JgRxuokQUyeOyo3pzyYWvZ" Name="Has Changed" Kind="OutputPin" />
+              <Patch Id="NjMYRhuUgN7MgBWN6YTca6" ManuallySortedPins="true">
+                <Patch Id="GbfTvtAbiEHLPW9LLnaxIY" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="GlfXRijqIX3Pn9w6Nwg7rw" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="529,745,36,19" Id="RRYP6OQYDDDMndRdqBMVFP">
+                  <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Now" />
+                    <CategoryReference Kind="Category" Name="DateTime" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="Unxp1Gjx7G4OSoapRVmDrR" Name="Now" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="529,776,46,26" Id="HQTxNZOgTSeN9sqVNhcyjo">
+                  <p:NodeReference LastCategoryFullName="Primitive.Nullable" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="Nullable" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="RrHZDhSE8d1MC8van6Lpg8" Name="Value" Kind="InputPin" />
+                  <Pin Id="F7e7k0L51GaLeSAs5eznlW" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="453,583,46,26" Id="VKhSEbvOOxRPwHK71AqZx1">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.Point" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfluxDB" />
+                    <CategoryReference Kind="AssemblyCategory" Name="WriteOnly" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Point" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                  </p:NodeReference>
+                  <Pin Id="Hhp8Uc7doSBQHyCqgOu0vf" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="453,622,91,26" Id="IsAcb5bSyf4O5JCyBC1Jep">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.Point" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="SetMeasurement" />
+                  </p:NodeReference>
+                  <Pin Id="OotyYYqUhkJOEO0G4EHhaz" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="TU77hgePUkSPo9HoOUzxXJ" Name="Value" Kind="InputPin" />
+                  <Pin Id="AW2hV7MVQSxPjNCrYw2Yga" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="453,669,56,26" Id="CKvNNGKwfflMqJ7PUiNQrE">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.Point" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="SetFields" />
+                  </p:NodeReference>
+                  <Pin Id="VotyjWWmlGSMTpVuYnDhei" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Jkta3gJveINQJ0mYdbC7On" Name="Value" Kind="InputPin" />
+                  <Pin Id="ToFWy2QoLbXP772AFRL02b" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="453,725,52,26" Id="CVFEXkfulIHPnPAd3uQE7L">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.Point" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="SetTags" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Point" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="AssemblyCategory" Name="WriteOnly" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="LziBLpmnWjpNajRU8yDhn3" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="T5WjPnySC7CO24aa05Vwu7" Name="Value" Kind="InputPin" />
+                  <Pin Id="NUfbAJdX0tdPoQDBSQjTFj" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="453,816,81,26" Id="UjuJVV8PQ8dLRn3PItmzHY">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.Point" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="SetTimestamp" />
+                  </p:NodeReference>
+                  <Pin Id="DAeYFD2gmiwPdKEX0PotOY" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="RBr8v5tIK1SLKzcl7K23uS" Name="Value" Kind="InputPin" />
+                  <Pin Id="LfAHqV8jY5ONcp3v9sojh4" Name="Output" Kind="StateOutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="NZray27MzeqOdRbQP30aup" Bounds="506,564" Alignment="Top" />
+              <ControlPoint Id="Q4P1sWdhvIUPQwfXpCV0LZ" Bounds="541,564" Alignment="Top" />
+              <ControlPoint Id="Tk4rRii2yOrObNaPOQnA53" Bounds="567,564" Alignment="Top" />
+              <ControlPoint Id="FRPZZTOJynYMkIx18I0XNy" Bounds="455,858" Alignment="Bottom" />
+            </Node>
+            <ControlPoint Id="I0NEbyeVVZqLQtmozvulde" Bounds="455,892" />
+          </Canvas>
+          <Patch Id="IM1VXP8GFuhPI3zr6FYqDG" Name="Create" />
+          <Patch Id="GOyZeGrat7iPa9d3uQRMm7" Name="Update" ManuallySortedPins="true">
+            <Pin Id="MjjSmlOUdoCPebc245OKbR" Name="Measurement" Kind="InputPin" Bounds="551,556" />
+            <Pin Id="F3gsxxjCeGUNUSF6aYEHCO" Name="Fields" Kind="InputPin" Bounds="538,516" />
+            <Pin Id="OMyE2N6rCx1MPcbXV07ojp" Name="Tags" Kind="InputPin" Bounds="547,700" />
+            <Pin Id="Dgl77oo2nfaNvLvPrpvrzd" Name="Output" Kind="OutputPin" Bounds="457,879" />
+          </Patch>
+          <ProcessDefinition Id="FHG5tcFZ3CmL4kE1j1OIgu">
+            <Fragment Id="BXaUG0yahezPly6bhnLgYO" Patch="IM1VXP8GFuhPI3zr6FYqDG" Enabled="true" />
+            <Fragment Id="IBQ07xEHg6VPrBgDApFVh8" Patch="GOyZeGrat7iPa9d3uQRMm7" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="JdJ4ooeKZuuORga8iGIFry" Ids="F3gsxxjCeGUNUSF6aYEHCO,C2Y1dg7nJtCNPRIWWohh8C" IsHidden="true" />
+          <Link Id="CHgakl71qdwPwo2AVWgDpV" Ids="MjjSmlOUdoCPebc245OKbR,QC3er0kGlaWMSnKxnbnItQ" IsHidden="true" />
+          <Link Id="Re43JitCuaFNQcsxrHMULl" Ids="OMyE2N6rCx1MPcbXV07ojp,FqcOjW7YT18McfDaHnKwDn" IsHidden="true" />
+          <Link Id="TWXdihUpBvKL1Dc4EjHLTM" Ids="Unxp1Gjx7G4OSoapRVmDrR,RrHZDhSE8d1MC8van6Lpg8" />
+          <Link Id="NOqQboloMupQDUtSPAMZap" Ids="C2Y1dg7nJtCNPRIWWohh8C,NZray27MzeqOdRbQP30aup" />
+          <Link Id="Rcn2zqhqZXTNv3e62qy0Vc" Ids="QC3er0kGlaWMSnKxnbnItQ,Q4P1sWdhvIUPQwfXpCV0LZ" />
+          <Link Id="Nuy2SDOVA1ZMi4OAIt8Mlm" Ids="FqcOjW7YT18McfDaHnKwDn,Tk4rRii2yOrObNaPOQnA53" />
+          <Link Id="Nj987wDUpBaP5iFzPvcwuy" Ids="FRPZZTOJynYMkIx18I0XNy,I0NEbyeVVZqLQtmozvulde" />
+          <Link Id="UrSuymYOctcLNi1XQTzGtf" Ids="I0NEbyeVVZqLQtmozvulde,Dgl77oo2nfaNvLvPrpvrzd" IsHidden="true" />
+          <Link Id="N0q0Uc4JsQHNUERFX7FivV" Ids="Hhp8Uc7doSBQHyCqgOu0vf,OotyYYqUhkJOEO0G4EHhaz" />
+          <Link Id="GRegHN4mm2xL4JCv0yFPF8" Ids="Q4P1sWdhvIUPQwfXpCV0LZ,TU77hgePUkSPo9HoOUzxXJ" />
+          <Link Id="LOpWBTYLmLCLzJLu6xpGV4" Ids="AW2hV7MVQSxPjNCrYw2Yga,VotyjWWmlGSMTpVuYnDhei" />
+          <Link Id="PED7yjPZhlHOlYbsrXUlzN" Ids="NZray27MzeqOdRbQP30aup,Jkta3gJveINQJ0mYdbC7On" />
+          <Link Id="IaXjhJDLwhSOdjR8E97iVy" Ids="ToFWy2QoLbXP772AFRL02b,LziBLpmnWjpNajRU8yDhn3" />
+          <Link Id="B68EfBEvF49MS6fC7R0UhP" Ids="Tk4rRii2yOrObNaPOQnA53,T5WjPnySC7CO24aa05Vwu7" />
+          <Link Id="As8VY3qxBa6PQDxOILom31" Ids="NUfbAJdX0tdPoQDBSQjTFj,DAeYFD2gmiwPdKEX0PotOY" />
+          <Link Id="UqsHQSZiHFuMRQ3XuwhHHH" Ids="F7e7k0L51GaLeSAs5eznlW,RBr8v5tIK1SLKzcl7K23uS" />
+          <Link Id="NPWF5SWXdjsPkNsnGSBsce" Ids="LfAHqV8jY5ONcp3v9sojh4,FRPZZTOJynYMkIx18I0XNy" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ WriteAsync ************************
+
+-->
+      <Node Name="WriteAsync" Bounds="338,469" Id="RKkKmh3ZYgeOZhwRjQro3Q" Summary="Writes to an InfluxDB, asynchronously">
+        <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+          <Choice Kind="ContainerDefinition" Name="Process" />
+        </p:NodeReference>
+        <Patch Id="LNQBLW8wNmYMz5D5vCp23Z">
+          <Canvas Id="TTb2clAUkk9L9gdqS622vq" CanvasType="Group">
+            <Node Bounds="471,496,263,96" Id="QeSooP7fs87Pr0Vec2OQzJ">
+              <p:NodeReference LastCategoryFullName="Reactive" LastSymbolSource="VL.Reactive.vl">
+                <Choice Kind="ProcessAppFlag" Name="AsyncTask" />
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              </p:NodeReference>
+              <Pin Id="B6F0GpxqqjBM2MZEPQnNBh" Name="Trigger" Kind="InputPin" />
+              <Pin Id="QkJH20rfVbqOSFunCEsteu" Name="Abort" Kind="InputPin" />
+              <Pin Id="TEEgwG9ymp9PmHwiNF6gHD" Name="Result" Kind="OutputPin" />
+              <Pin Id="EDXahLYLaDaLKEVyJhK4ju" Name="In Progress" Kind="OutputPin" />
+              <Patch Id="UAp1gUqVkHVODR9SJJiuAo" ManuallySortedPins="true">
+                <Patch Id="QrbLQ0VCvNfNK8kn1Bn6xy" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="KFAd6EJquokQbidzi4yxnY" Name="Update" ManuallySortedPins="true">
+                  <Pin Id="MmLMmgexwLDMS8MGR0XDLV" Name="Input 1" Kind="InputPin" />
+                  <Pin Id="LC3LlUIXwGLLtxcUcY4jVS" Name="Output" Kind="OutputPin" />
+                </Patch>
+                <ControlPoint Id="EmchzVMihm8NfN1S752jQ0" Bounds="475,504" />
+                <ControlPoint Id="Ci9OCYUDBwBLIB40imjQc5" Bounds="679,585" />
+                <Node Bounds="490,531,192,26" Id="NgR7Ez1kG1MMgSxvimdg1G">
+                  <p:NodeReference LastCategoryFullName="InfluxDB.WriteOnly.IInfluxDbClient" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="InfluxDB" />
+                    <CategoryReference Kind="AssemblyCategory" Name="WriteOnly" />
+                    <CategoryReference Kind="AssemblyCategory" Name="IInfluxDbClient" />
+                    <Choice Kind="OperationCallFlag" Name="WriteAsync" />
+                    <PinReference Kind="InputPin" Name="this">
+                      <p:DataTypeReference p:Type="TypeReference" LastCategoryFullName="InfluxDB.WriteOnly" LastSymbolSource="InfluxDB.WriteOnly.dll">
+                        <Choice Kind="TypeFlag" Name="IInfluxDbClient" />
+                      </p:DataTypeReference>
+                    </PinReference>
+                  </p:NodeReference>
+                  <Pin Id="MZhBD9l1tqhL8OwWPm6h9A" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="SCmwFsp6yECORGq8GAOXm4" Name="Db Name" Kind="InputPin" />
+                  <Pin Id="SiaTazt9qpvMKgg9NUafB4" Name="Points" Kind="InputPin" />
+                  <Pin Id="KDjLG7XY06ZM4dvibEeYS9" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="OdvVmOK0RDMLA5qJg7ow3c" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="OGfgsGfP6TSLKe8tntby44" Bounds="679,475" />
+            <ControlPoint Id="RhxXx6n5fn5QV7G44UbmQw" Bounds="492,455" />
+            <ControlPoint Id="APryvihP865NHLqD69zCZd" Bounds="586,449" />
+            <ControlPoint Id="J1GIkppGTsYMRL34xtkEwf" Bounds="473,372" />
+            <Node Bounds="471,400,56,19" Id="PGIf5q35x3GNFczQdF42JS">
+              <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="TogEdge" />
+              </p:NodeReference>
+              <Pin Id="NnHHwBR8YWIMRYnNdjUr83" Name="Value" Kind="InputPin" />
+              <Pin Id="HVDgouOf0BMNu8rlrrKFWV" Name="Up Edge" Kind="OutputPin" />
+              <Pin Id="UB5IWvTsG4tPdwWVWdImAK" Name="Down Edge" Kind="OutputPin" />
+            </Node>
+          </Canvas>
+          <Patch Id="NW53kZVJ0IaOeiJL2nIaTW" Name="Create" />
+          <Patch Id="MD9BDCDjBAlPRQpsmu8RS8" Name="Update" ManuallySortedPins="true">
+            <Pin Id="LobK0z5zKCILNtZMnQJ0Pf" Name="Client" Kind="InputPin" Bounds="495,334" />
+            <Pin Id="LZgHJjUgqc7Nb4Bs09wSuf" Name="Database Name" Kind="InputPin" Bounds="527,405" />
+            <Pin Id="SPiiHCwlWOvLbEDYYXKJEh" Name="Points" Kind="InputPin" Bounds="561,402" />
+            <Pin Id="TZgKBODv32ZQF1BGPagJHk" Name="Write" Kind="InputPin" Bounds="479,413" />
+          </Patch>
+          <ProcessDefinition Id="VhjQImSB5EXLSC8NCEShyL">
+            <Fragment Id="HVYyHKsGRYpMqPI8G1RWSm" Patch="NW53kZVJ0IaOeiJL2nIaTW" Enabled="true" />
+            <Fragment Id="LX28FyQ6pB8PTg6WXCydTU" Patch="MD9BDCDjBAlPRQpsmu8RS8" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="G3HiT4OlJbjPhFcBF7AGsB" Ids="MmLMmgexwLDMS8MGR0XDLV,EmchzVMihm8NfN1S752jQ0" IsHidden="true" />
+          <Link Id="D2zvcvEJil2PiIOSEZr8Af" Ids="Ci9OCYUDBwBLIB40imjQc5,LC3LlUIXwGLLtxcUcY4jVS" IsHidden="true" />
+          <Link Id="MCm7mkdLrK8OjZGHAwQEXG" Ids="OdvVmOK0RDMLA5qJg7ow3c,Ci9OCYUDBwBLIB40imjQc5" />
+          <Link Id="GeiYaNGueEFNH8D3FyYieC" Ids="OGfgsGfP6TSLKe8tntby44,SiaTazt9qpvMKgg9NUafB4" />
+          <Link Id="PgAQ4CJGbTfOTvLJkfR2xl" Ids="SPiiHCwlWOvLbEDYYXKJEh,OGfgsGfP6TSLKe8tntby44" IsHidden="true" />
+          <Link Id="Fy1V5A4FQH4Qbv0GLQqkql" Ids="RhxXx6n5fn5QV7G44UbmQw,MZhBD9l1tqhL8OwWPm6h9A" />
+          <Link Id="OtpkSkjFmPFQUPKrbk2h85" Ids="LobK0z5zKCILNtZMnQJ0Pf,RhxXx6n5fn5QV7G44UbmQw" IsHidden="true" />
+          <Link Id="UBBaMKPLerPP44sxBKbKZO" Ids="APryvihP865NHLqD69zCZd,SCmwFsp6yECORGq8GAOXm4" />
+          <Link Id="ANUq8AYliacN9fUND37IRo" Ids="LZgHJjUgqc7Nb4Bs09wSuf,APryvihP865NHLqD69zCZd" IsHidden="true" />
+          <Link Id="VCdsLcBG9mFNWzsYKQQgNv" Ids="J1GIkppGTsYMRL34xtkEwf,NnHHwBR8YWIMRYnNdjUr83" />
+          <Link Id="FUv9Bzgga7xOKNysJnipkP" Ids="TZgKBODv32ZQF1BGPagJHk,J1GIkppGTsYMRL34xtkEwf" IsHidden="true" />
+          <Link Id="VKtNJwa2cRHLbR9tdXKSY1" Ids="HVDgouOf0BMNu8rlrrKFWV,B6F0GpxqqjBM2MZEPQnNBh" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Field ************************
+
+-->
+      <Node Name="Field" Bounds="546,367" Id="MPvcir7yBYvMXNA59DkBfs" Summary="Fields are a required piece of the InfluxDB data structure - you cannot have data in InfluxDB without fields." Remarks="It’s also important to note that fields are not indexed.">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="InfluxDB.WriteOnly" LastSymbolSource="InfluxDB.WriteOnly.dll">
+          <Choice Kind="TypeFlag" Name="Field" />
+        </p:TypeAnnotation>
+        <Patch Id="GOyb2RylOuUOpakjfDj9cX">
+          <Canvas Id="FyesPux5izWNsPZcbtiBe2" CanvasType="Group" />
+          <ProcessDefinition Id="ANhka93qFJMPusUV76cF4c" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Tag ************************
+
+-->
+      <Node Name="Tag" Bounds="546,445" Id="SaNwdsarIdYLIk4utY5pS6">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="InfluxDB.WriteOnly" LastSymbolSource="InfluxDB.WriteOnly.dll">
+          <Choice Kind="TypeFlag" Name="Tag" />
+        </p:TypeAnnotation>
+        <Patch Id="Tq5n63Pb5RHLC63YvKHUQK">
+          <Canvas Id="AtDZsWjx71gOJHX025zmrK" BordersChecked="false" CanvasType="Group" />
+          <ProcessDefinition Id="JzdSkUDIxdVOZdL17iJpBE" IsHidden="true" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="EPnG9VF4dXPNowokpcckYs">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="NeR1umRIfwfLvrgAr45Ya3">
+        <Canvas Id="VR42tSdXZcKQToxEPE9z3g" CanvasType="Group" />
+        <Patch Id="VH9G8ILHmNWMu8nd5AGmmv" Name="Create" />
+        <Patch Id="Dg0pzDhr5XzLbMe0k8U38m" Name="Update" />
+        <ProcessDefinition Id="SRIVs15zKeIP3iqZxXyxF1">
+          <Fragment Id="H2RsW42lf14P1gm4yHee4A" Patch="VH9G8ILHmNWMu8nd5AGmmv" Enabled="true" />
+          <Fragment Id="AYHS4VxsHx3LJnTqHoInMi" Patch="Dg0pzDhr5XzLbMe0k8U38m" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="HCGACeycTpRQKbJXBoovmF" Location="VL.Skia" Version="2019.1.0-0667-gac4859edde" />
+  <PlatformDependency Id="DIczK4E3a7ML7T865gNCTU" Location="./lib/InfluxDB.WriteOnly.dll" />
+  <PlatformDependency Id="H3TaFLpvC2yPoukMnVCFxg" Location="netstandard" />
+</Document>
