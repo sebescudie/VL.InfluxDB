@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>VL.InfluxDB</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>VL.InfluxDB</title>
     <authors>kichristensen, sebescudie</authors>
     <owners>sebescudie</owners>
@@ -13,8 +13,8 @@
     <tags>database influxdb measure vl</tags>
   </metadata> 
   <files>
-    <file src="VL.InfluxDB.vl" target="" exclude="" />
-    <file src="help\**\*.vl" target="..\help" exclude="" />
-    <file src="lib\netstandard2.0\InfluxDB.WriteOnly.dll" target ="\lib\netstandard2.0" exclude="" />
+    <file src="..\VL.InfluxDB.vl" target="" exclude="" />
+    <file src="..\help\**\*.vl" target="..\help" exclude="" />
+    <file src="..\lib\netstandard2.0\InfluxDB.WriteOnly.dll" target ="\lib\netstandard2.0" exclude="" />
   </files>
 </package>
