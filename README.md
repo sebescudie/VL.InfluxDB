@@ -18,7 +18,7 @@ This plugin was done in an urgent need to write something to an InfluxDB databas
 
 ## Usage
 
-Press F1 and look for the _Send measurements to an InfluxDB database_ HowTo.
+Press <kbd>F1</kbd> and look for the _Send measurements to an InfluxDB database_ HowTo.
 
 ## Credits
 
